@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </head>
+    <body>
+        <form>
+            <p>
+                Select Temerature/Humidity
+            </p>
+            <select name="Select_TemORHum" id="Select_TemORHum">
+                <option value="Temperature" selected> Temperature
+                <option value="Humidity"> Humidity
+            </select>
+            
+            <p>
+                Range
+            </p>
+            <select name="Select_Type" id="Select_Type">
+                <option value="Month"> Monthly
+                <option value="Week"> Weekly
+                <option value="Day"> Daily
+                <option value="Hour" selected> Hourly
+            </select>
+            <div id="Select_Proto">
+            </div>
+        </form>
+        <br>
+        <button id="SubmitButton">Graph Render</button>
+
+        <div id="ChartDiv">
+        </div>
+        
+        <script type="module" src="../src/front/SelectManager.js"></script>
+        <script type="module" src="../src/front/ChartSubmit.js"></script>
+    </body>
+</html>

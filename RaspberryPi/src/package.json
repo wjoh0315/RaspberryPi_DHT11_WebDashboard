@@ -1,0 +1,27 @@
+{
+  "name": "raspi-dht11-webdashboard",
+  "version": "1.0.0",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.13.4",
+    "mariadb": "^2.5.3"
+  },
+  "description": "https://blog.naver.com/wjoh0315",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "python3 ./set.py"
+  },
+  "author": "wjoh0315",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjoh0315/RaspberryPi_DHT11_WebDashboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wjoh0315/RaspberryPi_DHT11_WebDashboard/issues"
+  },
+  "homepage": "https://github.com/wjoh0315/RaspberryPi_DHT11_WebDashboard#readme"
+}
