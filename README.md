@@ -30,7 +30,10 @@ DHT11 Temperature/Humidity Web Dashboard System of RaspberryPi with Arduino
 ### Step 1. Build the circuit
 ![image](https://user-images.githubusercontent.com/65387631/122662982-2213ea80-d1d2-11eb-9ebd-d3ed1a0a0b0a.png)
 
-### Step 2. Upload DHT11_RaspberryPi.ino to Arduino (using PC, NOT RASPBERRY PI)
+### Step 2. Upload DHT11_RaspberryPi.ino to Arduino (1.8.13^)(using PC, NOT RASPBERRY PI)
+Put the ```DHT_sensor_library folder``` to arduino's ```libraries``` folder
+
+And, put the ```DHT11_RaspberryPi``` folder to Arduino's sketch folder ```Arduino```
 
 ### Step 3. Connect usb between Arduino and RaspberryPi
 
@@ -96,4 +99,10 @@ raspidht11_server
 Background excute (with nohup log file nohup.out)
 ```
 raspidht11_server_background
+```
+
+## Excute Dashboard with browser
+```
+http://[Raspberry Pi's IP]/DHT11Dashboard.html
+(e.g. http://192.168.219.108/DHT11Dashboard.html)
 ```
