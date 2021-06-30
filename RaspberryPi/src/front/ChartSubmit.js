@@ -1,16 +1,7 @@
 import { DateToStringFormat, FirstDayAtWeek, Weekamount, FindDateWithWeek } from "./utility_front.js";
-
-let config = null;
-
-(async () => {
-    const data = await fetch("../src/front/config.json");
-    config = await data.json();
-})()
+import config from "./config.js"
 
 const Submit = () => {
-    if (config == null)
-        return;
-
     const Elements = {
         TemORHum: document.getElementById("Select_TemORHum"),
         Type: document.getElementById("Select_Type"),

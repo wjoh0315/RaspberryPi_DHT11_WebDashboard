@@ -1,4 +1,5 @@
 import * as DateUtil from "./utility_front.js";
+import config from "./config.js"
 
 // HTML Prototype
 const GetCheck = {
@@ -32,7 +33,7 @@ const Prototypes = [
 ];
 
 // Collect Start Time
-const Start = new Date(2021, 2, 21, 20, 56, 12);
+const Start = new Date(config["FirstLookupYear"]);
 
 // Local Time
 const Now = new Date();

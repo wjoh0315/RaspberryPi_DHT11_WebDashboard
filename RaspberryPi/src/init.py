@@ -11,30 +11,31 @@ os.chdir(os.path.dirname(__file__))
 keys = [ 
     "Host", "Port", "Serialport", 
     "DB_Host", "DB_User", "DB_Password",
-    "CollectDelay_Hour" 
+    "CollectDelay_Hour", "FirstLookupYear" 
 ]
 complete = False
 DataBase = "DHT11_Data"
 
 while not complete:
     strdata = ""
-    jsondict = dict()
+    strdata2 = "export default { "
     for i, v in enumerate(keys):
         usrInput = input(f"{v} ({os.getenv(v)}): ")
         insertInput = usrInput if usrInput != "" else os.getenv(v)
         strdata += f'{v} = {insertInput}\n'
-        if i < 2:
-            jsondict[v] = insertInput
+        if i < 2 or i == len(keys) - 1:
+            strdata2 += f'{v}: "{insertInput}"{"" if i == len(keys) - 1 else ", "}'
 
     ok = input("\nis it right? (yes): ")
     if ok == "yes" or ok == "":
+        strdata2 += " }"
         complete = True
         
 with open(".env", 'w', encoding="utf-8") as newfile_env:
     newfile_env.write(strdata)
 
-with open("./front/config.json", 'w', encoding="utf-8") as newfile_json:
-    json.dump(jsondict, newfile_json)
+with open("./front/config.js", 'w', encoding="utf-8") as newfile_js:
+    newfile_js.write(strdata2)
 
 load_dotenv()
 
