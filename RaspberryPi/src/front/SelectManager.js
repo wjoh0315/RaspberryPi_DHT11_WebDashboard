@@ -103,8 +103,8 @@ const SetElements_StartedByMonth = (type, year) => {
     const MonthElement = document.getElementById("Select_Month");
     const Month = [ 
         "January", "February", "March", "April",
-        "June", "July", "August", "September",
-        "October", "November", "December" 
+        "May", "June", "July", "August", 
+        "September", "October", "November", "December" 
     ];
     const DateWeekStart = new Date(
         Now.getFullYear(), 
