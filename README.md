@@ -3,6 +3,12 @@ DHT11 Temperature/Humidity Web Dashboard System of RaspberryPi with Arduino
 
 [blog in korea <퍼텐셜의 개발 일지>](https://blog.naver.com/wjoh0315)
 
+## To need
+```
+Apache web server
+MariaDB
+```
+
 ## Hierarchy
 ```
 /var/www (in apache web server)
@@ -76,6 +82,7 @@ DB_Host: Database Host IP (usually, localhost)
 DB_User: DB User ID
 DB_Password: DB password
 CollectDelay_Hour: Temperature/Humidity data collect delay (unit: Hour, e.g. 0.2 = 12 Minutes)
+FirstLookupYear: Dashboard lookup first year 
 ```
 **Caution: DB must not already have a database named "DHT11_Data" beform Initialize project settings (It's OK when it's done)**
 
